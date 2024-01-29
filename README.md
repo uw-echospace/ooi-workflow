@@ -14,3 +14,5 @@ If the Jupyter versions show up upon running the command, it means that Jupyter 
 
 **Notes**:
 - Currently using Dask for optimization and parallel processing.
+- Figuring out the threshold of the number of files that can be processed locally post optimization and parallel processing
+- Working on migration to JetStream by acquiring machine to improve scalability
