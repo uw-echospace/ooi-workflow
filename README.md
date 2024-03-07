@@ -49,6 +49,10 @@ Scaling the program proved problematic, especially given Dask's compatibility li
 4. Conda Environment Creation and Update Issues
 We encountered difficulties with generating and updating Conda environments, mainly due to the length of time it required to accomplish these tasks. The construction and update of Conda environments proved time-consuming, reducing the productivity of our development approach. This issue adds complexity to our project management and development duties, necessitating more time and resources to resolve.
 
+5. Lack of Storage and Computational Resources
+Our research encountered substantial resource limits, particularly in terms of storage and computational capacity. The sheer volume of data, which exceeded 1 TB, presented storage capacity constraints for both downloading and processing. Furthermore, due to the nature of the data processing activities, all computations were conducted in RAM, limiting the available memory.
+
+To solve these limits, we acquired a Jetstream virtual machine with more than 200 GB of RAM, allowing for speedier computing. However, the system only provided 350 GB of storage, which was insufficient for our data processing needs. To circumvent this issue, we created a method that involved mounting more virtual storage, so increasing our storage capacity to fit the enormous dataset.
 
 ## Installation Steps
 
