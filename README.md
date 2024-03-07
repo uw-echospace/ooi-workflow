@@ -37,20 +37,15 @@ To improve processing efficiency, we ran performance tests on our system, which 
 Dask parallel processing was created in order to alleviate this issue. The optimization produced notable gains in efficiency. We processed more than 300 files at once with Dask, finishing the job in an hour. This substantial improvement shows how to use parallel processing techniques to increase computing efficiency.
 
 ## Problems We Faced
-1. Time-Taking Process
-We experienced considerable difficulties throughout the raw data translation procedure, which required significant time and processing resources. Converting raw files to processed files proved time-consuming. To overcome this issue, we implemented Dask parallel processing, which is described in the 'Performance Improvement' section.
+1. Time-Taking Process - We experienced considerable difficulties throughout the raw data translation procedure, which required significant time and processing resources. Converting raw files to processed files proved time-consuming. To overcome this issue, we implemented Dask parallel processing, which is described in the 'Performance Improvement' section.
 
-2. Lack of Data Consistency
-Data consistency became a serious challenge as a result of the many data collection sources and frequent sensor changes. While there was considerable consistency in data between 2016 and 2019, with sensor upgrades occurring twice a year, data consistency deteriorated significantly after 2019. We had difficulty merging Echopype data due to irregularities in sensor channels. In addition, modifications to the raw data format occurred after 2019, complicating the data integration procedure.
+2. Lack of Data Consistency - Data consistency became a serious challenge as a result of the many data collection sources and frequent sensor changes. While there was considerable consistency in data between 2016 and 2019, with sensor upgrades occurring twice a year, data consistency deteriorated significantly after 2019. We had difficulty merging Echopype data due to irregularities in sensor channels. In addition, modifications to the raw data format occurred after 2019, complicating the data integration procedure.
 
-3. Scaling Challenges
-Scaling the program proved problematic, especially given Dask's compatibility limitations across several operating systems. Dask ran smoothly on macOS, but it had compatibility concerns on Windows and Ubuntu. To address these issues, we designed batch processing and created recursive functions for easier data combining and processing.
+3. Scaling Challenges - Scaling the program proved problematic, especially given Dask's compatibility limitations across several operating systems. Dask ran smoothly on macOS, but it had compatibility concerns on Windows and Ubuntu. To address these issues, we designed batch processing and created recursive functions for easier data combining and processing.
 
-4. Conda Environment Creation and Update Issues
-We encountered difficulties with generating and updating Conda environments, mainly due to the length of time it required to accomplish these tasks. The construction and update of Conda environments proved time-consuming, reducing the productivity of our development approach. This issue adds complexity to our project management and development duties, necessitating more time and resources to resolve.
+4. Conda Environment Creation and Update Issues - We encountered difficulties with generating and updating Conda environments, mainly due to the length of time it required to accomplish these tasks. The construction and update of Conda environments proved time-consuming, reducing the productivity of our development approach. This issue adds complexity to our project management and development duties, necessitating more time and resources to resolve.
 
-5. Lack of Storage and Computational Resources
-Our research encountered substantial resource limits, particularly in terms of storage and computational capacity. The sheer volume of data, which exceeded 1 TB, presented storage capacity constraints for both downloading and processing. Furthermore, due to the nature of the data processing activities, all computations were conducted in RAM, limiting the available memory.
+5. Lack of Storage and Computational Resources - Our research encountered substantial resource limits, particularly in terms of storage and computational capacity. The sheer volume of data, which exceeded 1 TB, presented storage capacity constraints for both downloading and processing. Furthermore, due to the nature of the data processing activities, all computations were conducted in RAM, limiting the available memory.
 
 To solve these limits, we acquired a Jetstream virtual machine with more than 200 GB of RAM, allowing for speedier computing. However, the system only provided 350 GB of storage, which was insufficient for our data processing needs. To circumvent this issue, we created a method that involved mounting more virtual storage, so increasing our storage capacity to fit the enormous dataset.
 
