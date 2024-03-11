@@ -37,17 +37,20 @@ Once we generate the URL for each day within the given period in the data acquis
 ## 5. Results
 ### 5.1. Major Improvements and Outcomes
 1. We have successfully implemented a data pipeline designed for ingestion, processing, and visualization, streamlining the entire process for users as illustrated in Figure 2. This automation simplifies the workflow, requiring users only to input the data URL, with the subsequent steps being handled seamlessly. The pipeline culminates in an interactive visualization, relieving researchers from the burden of coding solutions to manage vast amounts of ocean data. Instead, they can effortlessly input the data URL and access visualizations, enabling them to focus more on ocean research.
+
 ![Proposed Pipeline Architecture](images/proposed_pipeline_architecture.png)
 
-2. Moreover, we have significantly optimized memory usage by eliminating the need to store extracted raw files physically on the system. Previously, the extraction process required substantial memory (~100GB) to store .Zarr files. With our pipeline, we have removed this redundancy by storing the raw files in the program memory, leading to a notable reduction in memory requirements.
+3. Moreover, we have significantly optimized memory usage by eliminating the need to store extracted raw files physically on the system. Previously, the extraction process required substantial memory (~100GB) to store .Zarr files. With our pipeline, we have removed this redundancy by storing the raw files in the program memory, leading to a notable reduction in memory requirements.
 
-3. Furthermore, we have enhanced processing capacity by ~28 times through Dask optimization. While the previous implementation could only process one day of raw data, our pipeline can now handle up to 1400 raw data files, significantly expanding processing capabilities.
+4. Furthermore, we have enhanced processing capacity by ~28 times through Dask optimization. While the previous implementation could only process one day of raw data, our pipeline can now handle up to 1400 raw data files, significantly expanding processing capabilities.
+
 ![Processing Raw Files](images/processing_raw_files.png)
 
-4. Additionally, the processing time for raw files has been reduced by ~15 times with Dask optimization. Whereas standard Python libraries could process only about 50 raw files, taking close to 3 hours, Dask enables processing of 1400 files within 30 minutes.
+6. Additionally, the processing time for raw files has been reduced by ~15 times with Dask optimization. Whereas standard Python libraries could process only about 50 raw files, taking close to 3 hours, Dask enables processing of 1400 files within 30 minutes.
+
 ![Processing Time](images/processing_time.png)
 
-5. Finally, we have introduced interactive visualization features at the pipeline's end, enabling users to explore single as well as multi-day, week, and month visualizations interactively. 
+8. Finally, we have introduced interactive visualization features at the pipeline's end, enabling users to explore single as well as multi-day, week, and month visualizations interactively. 
  
 
 ### 5.2. Some Additional Interesting Findings
@@ -60,7 +63,7 @@ Once we generate the URL for each day within the given period in the data acquis
 4. Additionally, we explored alternative parallel processing strategies using standard Python libraries on both Windows and Mac platforms. However, comparative analysis revealed that Dask consistently outperformed these methods, demonstrating superior performance across various tasks.
 
 
-## Problems We Faced
+## Challenges Faced
 1. Time-Taking Process - We experienced considerable difficulties throughout the raw data translation procedure, which required significant time and processing resources. Converting raw files to processed files proved time-consuming. To overcome this issue, we implemented Dask parallel processing, which is described in the 'Performance Improvement' section.
 
 2. Lack of Data Consistency - Data consistency became a serious challenge as a result of the many data collection sources and frequent sensor changes. While there was considerable consistency in data between 2016 and 2019, with sensor upgrades occurring twice a year, data consistency deteriorated significantly after 2019. We had difficulty merging Echopype data due to irregularities in sensor channels. In addition, modifications to the raw data format occurred after 2019, complicating the data integration procedure.
