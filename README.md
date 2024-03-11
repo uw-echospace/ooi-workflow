@@ -1,4 +1,4 @@
-
+[![GitHub license](https://img.shields.io/github/license/uw-echospace/ooi-workflow)](https://github.com/uw-echospace/ooi-workflow/blob/main/LICENSE)
 
 # Cloud-Based Ocean Sonar Data Processing and Visualization
 Echosounders, which are vital for studying marine life, generate massive amounts of data that go unused due to a lack of adequate processing and visualization tools. Our project expands on the Echopype ecosystem, using Echopype for data processing, Echoshader for visualization, and Echoflow for workflow orchestration. We use cloud computing resources to efficiently manage massive datasets.
