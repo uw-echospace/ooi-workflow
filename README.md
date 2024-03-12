@@ -71,6 +71,10 @@ Once we generate the URL for each day within the given period in the data acquis
 ![Visualization1](images/visualization1.png)
 
 ![Visualization2](images/visualization2.png)
+
+![Visualization3](images/visualization3.png)
+
+![Visualization4](images/visualization4.png)
  
 
 ### 5.2. Some Additional Interesting Findings
