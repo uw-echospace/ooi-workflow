@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/uw-echospace/ooi-workflow)](https://github.com/uw-echospace/ooi-workflow/blob/main/LICENSE)
 # Ocean Sonar Data Workflow
 #### Data 591 – Capstone Project
-##### Sagnik Ghosal, Prerit Chaudhary, Ishank Vasania (Sponsor: Applied Physics Lab, eScience Institute)
+##### Sagnik Ghosal, Prerit Chaudhary, Ishank Vasania, Sponsors: Wu-Jung Lee, Valentina Staneva (Applied Physics Lab, eScience Institute)
 
 ## Table of Contents
   * [1. Introduction](#1-introduction)
@@ -41,7 +41,7 @@ In our study, we aim to develop a streamlined workflow for processing and visual
  
 
 ### 4.2. Pipeline Development
-We have developed a comprehensive pipeline to streamline the process of data ingestion, preprocessing, and visualization. The pipeline begins by taking in the Raw Data URL covering multiple years. Using the Echopype library, the pipeline performs several key tasks: data ingestion retrieves raw data files for each day within the specified period, data conversion transforms raw data files into echodata objects, and data processing includes cleaning, filtering, and aggregating the data. Finally, all echodata objects are consolidated into a single echodata object. In the subsequent stage of the pipeline, the Echoshader library is employed to create interactive visualizations. Users are provided with options to display visualizations for specific days, spanning across months, or for an entire year, enhancing accessibility and user experience. 
+We have developed a comprehensive pipeline to streamline the process of data ingestion, preprocessing, and visualization. The pipeline begins by taking in the Raw Data URL. Using the Echopype library, the pipeline performs several key tasks: data ingestion retrieves raw data files for each day within the specified period, data conversion transforms raw data files into echodata objects, and data processing includes cleaning, filtering, and aggregating the data. Finally, all echodata objects are consolidated into a single echodata object. In the subsequent stage of the pipeline, the Echoshader library is employed to create interactive visualizations. Users are provided with options to display visualizations for specific days, or for an entire month, enhancing accessibility and user experience. 
 
 ### 4.3. Data Acquisition
 The echosounder data, amounting to terabytes, is obtained from the NSF Ocean Observatories Initiative (OOI) dating back to 2014. This vast dataset is stored using an Apache file system. It encompasses time-series ocean data across various domains, including the Air-Sea Interface, Seafloor/Crust, and Water Column. The data is accessible in two main formats: Processed Datasets in NetCDF format and JSON format. These formats facilitate easy access and compatibility with a range of analysis tools and software environments. The data acquisition process begins by defining the URL for raw data retrieval from the Ocean Observatories Initiative (OOI) platform. We establish a function to handle exceptions during parsing, ensuring robust error handling. First, we check if the file URL falls within the specified datetime range. Then, using a loop, we generate URLs for each day within the desired period.
