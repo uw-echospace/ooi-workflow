@@ -19,17 +19,17 @@
   * [Reproducing the Analysis](#reproducing-the-analysis)
   * [Best Documentation Practices](#best-documentation-practices)
 
-Code Notebooks -
+### Code Notebooks -
 
-# Data_Pipeline.ipynb 
+##### Data_Pipeline.ipynb 
 
 The notebook contains the complete data pipeline which fetches, processes and combines the echodata objects. This code can be scaled to other instruments with small tweaks.
 
-# Data_Pipeline_Visualization.ipynb
+##### Data_Pipeline_Visualization.ipynb
 
 The notebook contains the visualization for a short period of time using the code in the Data_Pipeline.ipynb  
 
-# Echoshader Visualization.ipynb - 
+##### Echoshader Visualization.ipynb - 
 
 The notebook extends to the visualizations using Echoshader.
 
